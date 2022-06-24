@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    min-height: 100vh;
+    background-color: #6D8B74;
+    
+}
+/* header section*/
+.header{
+    display: flex;
+    position: relative;
+}
+.header_image{
+    padding: 2rem;
+    height: 20rem;
+}
+.header_title{
+    left: 50%;
+    top: 0;
+    position: absolute;
+    transform: translate(-50%,0);
+    margin-top: 2rem;
+    font-size: 3.5rem;
+}
