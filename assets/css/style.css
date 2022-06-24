@@ -150,3 +150,46 @@ label{
 .hidden {
     display: none;
 }
+/* game section */
+.game_section--title{
+    font-size: 3rem;
+    text-align: center;
+}
+.game{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.player{
+    width: 30%;
+}
+.game_first-player--name,
+.game_second-player--name{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.health-border{
+    width: 50%;
+    height: 2.1rem;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
+#player-one-health , #player-two-health{
+    width: 100%;
+    height: 2rem;
+    background-color: #fff;
+}
+.game_first-player--image,
+.game_second-player--image{
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.game_first-player--attack,
+.game_second-player--attack{
+    margin: 2rem auto;
+    display: block;
+    padding: 1.5rem 2.5rem;
+}
