@@ -215,6 +215,34 @@ label{
 #game_mid-score-box > p {
     padding: 1rem;
 }
+/* rock paper scissor section */
+.rps_game{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 30%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 2rem rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+.rps_game-fplayer,
+.rps_game-splayer{
+    margin-top: 2rem;
+    width: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rps_game > p{
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+}
 /* hidden class */
 .hidden {
     display: none;
