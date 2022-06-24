@@ -146,10 +146,6 @@ label{
     border: 1px solid #000;
     color: #000;
 }
-/* hidden class */
-.hidden {
-    display: none;
-}
 /* game section */
 .game_section--title{
     font-size: 3rem;
@@ -167,6 +163,7 @@ label{
 .game_second-player--name{
     text-align: center;
     font-size: 2.5rem;
+    color: #fff;
 }
 .health-border{
     width: 50%;
@@ -192,4 +189,33 @@ label{
     margin: 2rem auto;
     display: block;
     padding: 1.5rem 2.5rem;
+}
+/* mid section */
+.game_mid-text{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    padding: 3rem;
+}
+.game_mid-start,
+.game_mid-replay{
+    display: block;
+    margin: 0 auto; 
+    padding: 1.5rem 2.5rem;
+}
+#game_mid-score-box{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+#game_mid-score-box > p {
+    padding: 1rem;
+}
+/* hidden class */
+.hidden {
+    display: none;
 }
