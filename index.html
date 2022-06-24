@@ -21,8 +21,22 @@
             <button class="main_buttons-new btn">New Game</button>
             <button class="main_buttons-instructions btn">Instructions</button>
         </div>
+        <!-- form section for players names-->
+        <div class="main_form">
+            <form action="POST" onsubmit="submitForm(event)">
+                <div class="main_form-player1">
+                    <label for="fplayer">First Player</label>
+                    <input type="text" name="fplayer" id="fplayer" required>
+                </div>
+                <div class="main_form-player2">
+                    <label for="splayer">Second Player</label>
+                    <input type="text" name="splayer" id="splayer" required>
+                </div>
+                <input type="submit" name="submit" id="submit">
+            </form>
+        </div>
         <!-- instructions modal -->
-        <div class="main_instructions">
+        <div class="main_instructions hidden">
             <button class="main_instructions-close">&times;</button>
             <h2 class="main_instructions-title">Instructions</h2>
             <ul class="main_instructions-list">
