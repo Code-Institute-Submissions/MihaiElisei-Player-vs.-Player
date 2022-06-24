@@ -59,3 +59,40 @@ body{
     box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.9);
     border: 1px solid white;
 }
+/* instructions modal */
+.main_instructions{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.5);
+}
+.main_instructions-close{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: #000;
+    cursor: pointer;
+    border:none;
+    background: none;
+}
+.main_instructions-title{
+    text-align: center;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+}
+.main_instructions-list{
+    padding: 2.5rem;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.main_instructions-footer{
+    float: right;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
