@@ -12,7 +12,7 @@ body{
     font-family: 'Press Start 2P', sans-serif;
     min-height: 100vh;
     background-color: #6D8B74;
-    
+    position: relative;
 }
 /* header section*/
 .header{
@@ -30,4 +30,32 @@ body{
     transform: translate(-50%,0);
     margin-top: 2rem;
     font-size: 3.5rem;
+}
+
+/* main page buttons */
+.main_title{
+    text-align: center;
+    margin-top: 3rem;
+}
+.main_buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    padding: 2rem;
+    border-radius: 5px;
+    margin:0 3rem;
+}
+
+.btn:hover{
+    background-color:rgba(109, 139, 116, 0.111); 
+    color: #fff;
+    box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.9);
+    border: 1px solid white;
 }
