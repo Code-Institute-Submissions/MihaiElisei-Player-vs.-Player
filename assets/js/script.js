@@ -1,5 +1,15 @@
 const newGameBtn = document.querySelector('.main_buttons-new');
 const instructionsBtn = document.querySelector('.main_buttons-instructions');
+const submitButton = document.getElementById('submit');
+// function to prevent default behaviour of the form
+function submitForm(event){
+    event.preventDefault();
+    submitButton.addEventListener('click', function(){
+        document.querySelector('.players-form').classList.add('hidden');
+        document.querySelector('.game').classList.remove('hidden');
+        document.querySelector('.footer').classList.add('hidden');
+    })
+}
 
 // hide new game and instruction buttons and display form section
 newGameBtn.addEventListener('click', function(){

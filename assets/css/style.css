@@ -59,6 +59,9 @@ body{
     box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.9);
     border: 1px solid white;
 }
+.btn:focus{
+    outline:none;
+}
 /* instructions modal */
 .main_instructions{
     position: absolute;
