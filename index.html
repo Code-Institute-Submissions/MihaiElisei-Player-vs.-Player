@@ -15,14 +15,14 @@
         <h1 class="header_title">Player vs. Player</h1>
     </header>
     <!-- main buttons -->
-    <section class="main">
+    <section class="main hidden">
         <h2 class="main_title">Please read the Instructions first!</h2>
         <div class="main_buttons">
             <button class="main_buttons-new btn">New Game</button>
             <button class="main_buttons-instructions btn">Instructions</button>
         </div>
         <!-- form section for players names-->
-        <div class="main_form">
+        <div class="main_form hidden">
             <form action="POST" onsubmit="submitForm(event)">
                 <div class="main_form-player1">
                     <label for="fplayer">First Player</label>
@@ -53,6 +53,32 @@
                 <li>Name of the winner will be displayed and the Home button that will reset the entire game.</li>
                 <p class="main_instructions-footer">Have Fun!</p>
             </ul>    
+        </div>
+    </section>
+    <!-- main game section -->
+    <section class="games-section">
+        <h2>Player turn</h2>
+        <div class="game">
+            <div class="game_first-player">
+                <p class="game_first-player--name">First Player</p>
+                <img src="assets/images/sword.png" alt="sword image" class="game_first-player--image">
+                <div class="health-border">
+                    <div id="player-one-health"></div>
+                </div>
+                <button class="game_first-player--attack btn">Attack</button>
+            </div>
+            <div class="game_mid-section">
+
+            </div>
+            <div class="game_second-player">
+                <div class="game_second-player">
+                <p class="game_second-player--name">second Player</p>
+                <img src="assets/images/sword.png" alt="sword image" class="game_second-player--image">
+                <div class="health-border">
+                    <div id="player-two-health"></div>
+                </div>
+                <button class="game_second-player--attack btn">Attack</button>
+            </div>
         </div>
     </section>
     <script src="assets/js/script.js"></script>
