@@ -1,3 +1,5 @@
+let firstPlayerHealth = 100;
+let secondPlayerTwoHealth = 100;
 const newGameBtn = document.querySelector('.main_buttons-new');
 const instructionsBtn = document.querySelector('.main_buttons-instructions');
 const submitButton = document.getElementById('submit');
@@ -114,8 +116,14 @@ function playersAttackOptions (){
             playersAttackOptions();
         }
     }
-    
 }
+
+// attack sequence
+function playersAttack(firstPlayer, secondPlayer){
+
+}
+
+
 // hide new game and instruction buttons and display form section
 newGameBtn.addEventListener('click', function(){
     newGameBtn.classList.add('hidden');
