@@ -4,6 +4,7 @@ const submitButton = document.getElementById('submit');
 const firstPlayerName = document.querySelector('.game_first-player--name');
 const secondPlayerName = document.querySelector('.game_second-player--name');
 const startGame = document.querySelector('.game_mid-start');
+const attacks = ['slap', 'punch', 'sword', 'axe', 'mace', 'spell'];
 
 // function to prevent default behaviour of the form
 function submitForm(event){
@@ -81,19 +82,40 @@ function choseWhoStart(){
     }else if(firstPlayerCoice === secondPlayerChoice){
         choseWhoStart();
     }
-    console.log(firstPlayerCoice, secondPlayerChoice)
     // Change the winner name and display the winner attack button
     if(firstPlayer === 'win'){
         whoStart.innerHTML = firstPlayerName;
-        document.querySelector('.game_first-player--attack').classList.remove('hidden');
+        document.querySelector('.game_first-player--buttons').classList.remove('hidden');
+        playersAttackOptions();
     }else if (secondPlayer === 'win'){
         whoStart.innerHTML = secondPlayerName;
-        document.querySelector('.game_second-player--attack').classList.remove('hidden');
+        document.querySelector('.game_second-player--buttons').classList.remove('hidden');
+        playersAttackOptions();
     }
     document.querySelector('.rps_game').classList.remove('hidden');
-
 } 
 
+// players attack options
+function playersAttackOptions (){
+    let randomNum1 = Math.floor(Math.random() * 6);
+    let randomNum2 = Math.floor(Math.random() * 6);
+    if(document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
+        document.querySelector('.game_second-player1--attack').innerHTML = attacks[randomNum1];
+        document.querySelector('.game_second-player2--attack').innerHTML = attacks[randomNum2];
+        console.log(attacks[randomNum1],attacks[randomNum2])
+        if(attacks[randomNum1] === attacks[randomNum2]){
+            playersAttackOptions();
+        }
+    }else if(document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
+        document.querySelector('.game_first-player1--attack').innerHTML = attacks[randomNum1];
+        document.querySelector('.game_first-player2--attack').innerHTML = attacks[randomNum2];
+        console.log(attacks[randomNum1],attacks[randomNum2])
+        if(attacks[randomNum1] === attacks [randomNum2]){
+            playersAttackOptions();
+        }
+    }
+    
+}
 // hide new game and instruction buttons and display form section
 newGameBtn.addEventListener('click', function(){
     newGameBtn.classList.add('hidden');
