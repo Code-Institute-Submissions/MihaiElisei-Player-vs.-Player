@@ -98,6 +98,7 @@ function choseWhoStart(){
         playersAttackOptions();
     }
     document.querySelector('.rps_game').classList.remove('hidden');
+    
 } 
 
 // players attack options
@@ -141,6 +142,8 @@ for(let i = 0; i < attackBtns.length; i++){
         }else if(attackBtns[i].innerHTML === "spell"){
             damageDone = Math.floor(Math.random() * 20 + 15);
         }
+        document.querySelector('.rps_game').classList.add('hidden');
+        document.querySelector('.game_mid-start').classList.add('hidden');
         console.log(damageDone)
         // decrease health bar
         function health(firstPlayer,secondPlayer){
@@ -163,9 +166,19 @@ for(let i = 0; i < attackBtns.length; i++){
             if(firstPlayerHealth <= 0){
                 scoreSecondPlayer = scoreSecondPlayer + 1;
                 document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
+                document.querySelector('.game_mid-replay').classList.remove('hidden');
+                document.querySelector('.game_first-player--buttons').classList.add('hidden');
+                document.querySelector('.game_second-player--buttons').classList.add('hidden');
+                document.getElementById('player-one-health').style.width = 0;
+                
             }else if(secondPlayerHealth <= 0){
                 scoreFirstPlayer = scoreFirstPlayer + 1;
                 document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
+                document.querySelector('.game_mid-replay').classList.remove('hidden');
+                document.querySelector('.game_first-player--buttons').classList.add('hidden');
+                document.querySelector('.game_second-player--buttons').classList.add('hidden');
+                document.getElementById('player-two-health').style.width = 0;
+            
             }
         }
         health();
@@ -173,8 +186,15 @@ for(let i = 0; i < attackBtns.length; i++){
     })
 }
 
-
-
+// replay
+function replay(){
+    firstPlayerHealth = 100;
+    secondPlayerHealth = 100;
+    document.getElementById('player-one-health').style.width = "100%";
+    document.getElementById('player-two-health').style.width = "100%";
+    choseWhoStart();
+}
+document.querySelector('.game_mid-replay').addEventListener('click', replay)
 // hide attacker buttons after each attack
 for(let i = 0; i < attackBtns.length; i++){
 attackBtns[i].addEventListener('click', function(){
