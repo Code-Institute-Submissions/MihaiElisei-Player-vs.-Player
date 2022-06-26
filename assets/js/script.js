@@ -175,10 +175,21 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-two-health').style.width = 0;
             }
+         
         }
         health();
+        // reset score when a player reach score = 3
+        if(scoreFirstPlayer === 3 || scoreSecondPlayer === 3){
+            scoreFirstPlayer = 0;
+            scoreSecondPlayer = 0;
+            document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
+            document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
+        }
     })
 }
+
+
+
 
 // replay game function
 function replay(){
