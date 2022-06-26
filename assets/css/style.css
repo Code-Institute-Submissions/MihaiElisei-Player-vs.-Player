@@ -151,6 +151,18 @@ label{
     color: #000;
 }
 /* game section */
+.games_section{
+    position: relative;
+}
+.game_section-winner{
+    position: absolute;
+    width: 70%;
+    height: 70vh;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
 .game_section--title{
     font-size: 3rem;
     text-align: center;
