@@ -118,7 +118,10 @@ function playersAttackOptions (){
         }
     }
 }
-
+/**
+ * add event listener for attack buttons
+ * add damage to each attack option
+ */
 for(let i = 0; i < attackBtns.length; i++){
     attackBtns[i].addEventListener('click', function(){
         let damageDone;
@@ -135,7 +138,22 @@ for(let i = 0; i < attackBtns.length; i++){
         }else if(attackBtns[i].innerHTML === "spell"){
             damageDone = Math.floor(Math.random() * 20 + 15);
         }
-    })
+    })  
+      
+}
+// hide attacker buttons after each attack
+for(let i = 0; i < attackBtns.length; i++){
+attackBtns[i].addEventListener('click', function(){
+    if(!document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
+        document.querySelector('.game_first-player--buttons').classList.add('hidden');
+        document.querySelector('.game_second-player--buttons').classList.remove('hidden');
+        playersAttackOptions();
+    }else if(!document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
+        document.querySelector('.game_second-player--buttons').classList.add('hidden');
+        document.querySelector('.game_first-player--buttons').classList.remove('hidden');
+        playersAttackOptions();
+    }
+})
 }
 
 
