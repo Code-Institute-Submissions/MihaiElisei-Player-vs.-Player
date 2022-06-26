@@ -180,16 +180,29 @@ for(let i = 0; i < attackBtns.length; i++){
         health();
         // reset score when a player reach score = 3
         if(scoreFirstPlayer === 3 || scoreSecondPlayer === 3){
+            // chage images when a player wins 
+            if(scoreFirstPlayer === 3){
+                document.querySelector('.game_first-player--image').src = 'assets/images/evil.gif';
+                document.querySelector('.game_second-player--image').src = 'assets/images/rip.gif';
+            }else if(scoreSecondPlayer === 3){
+                document.querySelector('.game_second-player--image').src = 'assets/images/evil.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/rip.gif'
+            }
             scoreFirstPlayer = 0;
             scoreSecondPlayer = 0;
             document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
             document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
+            resetGame()
         }
     })
 }
 
 
-
+function resetGame(){
+    firstPlayerHealth = 100;
+    secondPlayerHealth = 100;
+    document.querySelector('.game_mid-section').classList.add('hidden')
+}
 
 // replay game function
 function replay(){
