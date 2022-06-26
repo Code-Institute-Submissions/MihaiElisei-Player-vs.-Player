@@ -108,14 +108,12 @@ function playersAttackOptions (){
     if(document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
         document.querySelector('.game_second-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_second-player2--attack').innerHTML = attacks[randomNum2];
-        console.log(attacks[randomNum1],attacks[randomNum2])
         if(attacks[randomNum1] === attacks[randomNum2]){
             playersAttackOptions();
         }
     }else if(document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
         document.querySelector('.game_first-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_first-player2--attack').innerHTML = attacks[randomNum2];
-        console.log(attacks[randomNum1],attacks[randomNum2])
         if(attacks[randomNum1] === attacks[randomNum2]){
             playersAttackOptions();
         }
@@ -144,7 +142,8 @@ for(let i = 0; i < attackBtns.length; i++){
         }
         document.querySelector('.rps_game').classList.add('hidden');
         document.querySelector('.game_mid-start').classList.add('hidden');
-        console.log(damageDone)
+        document.querySelector('.game_mid-replay').classList.add('hidden');
+        document.getElementById('display-damage').innerHTML = damageDone;
         // decrease health bar
         function health(firstPlayer,secondPlayer){
             firstPlayer = firstPlayerHealth;
@@ -154,13 +153,11 @@ for(let i = 0; i < attackBtns.length; i++){
                 secondPlayerHealth = newHealth;
                 let healthBar = (newHealth / 100) * newHealth;
                 document.getElementById('player-two-health').style.width = healthBar + '%';
-                console.log(newHealth);
             }else if(!document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
                 let newHealth = firstPlayer - damageDone;
                 firstPlayerHealth = newHealth;
                 let healthBar = (newHealth / 100) * newHealth;
                 document.getElementById('player-one-health').style.width = healthBar + '%';
-                console.log(newHealth);
             }
         // increase score
             if(firstPlayerHealth <= 0){
@@ -170,7 +167,6 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--buttons').classList.add('hidden');
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-one-health').style.width = 0;
-                
             }else if(secondPlayerHealth <= 0){
                 scoreFirstPlayer = scoreFirstPlayer + 1;
                 document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
@@ -178,15 +174,13 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--buttons').classList.add('hidden');
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-two-health').style.width = 0;
-            
             }
         }
         health();
-       
     })
 }
 
-// replay
+// replay game function
 function replay(){
     firstPlayerHealth = 100;
     secondPlayerHealth = 100;
@@ -194,23 +188,10 @@ function replay(){
     document.getElementById('player-two-health').style.width = "100%";
     choseWhoStart();
 }
-document.querySelector('.game_mid-replay').addEventListener('click', replay)
-// hide attacker buttons after each attack
-for(let i = 0; i < attackBtns.length; i++){
-attackBtns[i].addEventListener('click', function(){
-    if(!document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
-        document.querySelector('.game_first-player--buttons').classList.add('hidden');
-        document.querySelector('.game_second-player--buttons').classList.remove('hidden');
-        playersAttackOptions();
-    }else if(!document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
-        document.querySelector('.game_second-player--buttons').classList.add('hidden');
-        document.querySelector('.game_first-player--buttons').classList.remove('hidden');
-        playersAttackOptions();
-    }
-})
-}
 
-
+/**
+ * Event Listeners
+ */
 // hide new game and instruction buttons and display form section
 newGameBtn.addEventListener('click', function(){
     newGameBtn.classList.add('hidden');
@@ -218,6 +199,22 @@ newGameBtn.addEventListener('click', function(){
     document.querySelector('.main_title').classList.add('hidden')
     document.querySelector('.main_form').classList.remove('hidden');
 });
+// hide attacker buttons after each attack
+for(let i = 0; i < attackBtns.length; i++){
+    attackBtns[i].addEventListener('click', function(){
+        if(!document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
+            document.querySelector('.game_first-player--buttons').classList.add('hidden');
+            document.querySelector('.game_second-player--buttons').classList.remove('hidden');
+            playersAttackOptions();
+        }else if(!document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
+            document.querySelector('.game_second-player--buttons').classList.add('hidden');
+            document.querySelector('.game_first-player--buttons').classList.remove('hidden');
+            playersAttackOptions();
+        }
+    })
+    }
+// replay game
+document.querySelector('.game_mid-replay').addEventListener('click', replay);
 // open instructions modal
 instructionsBtn.addEventListener('click', function(){
     document.querySelector('.main_instructions').classList.remove('hidden');
