@@ -7,6 +7,7 @@ const firstPlayerName = document.querySelector('.game_first-player--name');
 const secondPlayerName = document.querySelector('.game_second-player--name');
 const startGame = document.querySelector('.game_mid-start');
 const attacks = ['slap', 'punch', 'sword', 'axe', 'mace', 'spell'];
+const attackBtns = document.querySelectorAll('.attack-btn');
 
 // function to prevent default behaviour of the form
 function submitForm(event){
@@ -112,15 +113,29 @@ function playersAttackOptions (){
         document.querySelector('.game_first-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_first-player2--attack').innerHTML = attacks[randomNum2];
         console.log(attacks[randomNum1],attacks[randomNum2])
-        if(attacks[randomNum1] === attacks [randomNum2]){
+        if(attacks[randomNum1] === attacks[randomNum2]){
             playersAttackOptions();
         }
     }
 }
 
-// attack sequence
-function playersAttack(firstPlayer, secondPlayer){
-
+for(let i = 0; i < attackBtns.length; i++){
+    attackBtns[i].addEventListener('click', function(){
+        let damageDone;
+        if(attackBtns[i].innerHTML === "slap"){
+            damageDone = Math.floor(Math.random() * 5);
+        }else if(attackBtns[i].innerHTML === "punch"){
+            damageDone = Math.floor(Math.random() * 7 + 3);
+        }else if(attackBtns[i].innerHTML === "sword"){
+            damageDone = Math.floor(Math.random() * 10 + 5);
+        }else if(attackBtns[i].innerHTML === "axe"){
+            damageDone = Math.floor(Math.random() * 12 + 7);
+        }else if(attackBtns[i].innerHTML === "mace"){
+            damageDone = Math.floor(Math.random() * 15 + 10);
+        }else if(attackBtns[i].innerHTML === "spell"){
+            damageDone = Math.floor(Math.random() * 20 + 15);
+        }
+    })
 }
 
 
