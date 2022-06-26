@@ -1,5 +1,5 @@
 let firstPlayerHealth = 100;
-let secondPlayerTwoHealth = 100;
+let secondPlayerHealth = 100;
 const newGameBtn = document.querySelector('.main_buttons-new');
 const instructionsBtn = document.querySelector('.main_buttons-instructions');
 const submitButton = document.getElementById('submit');
@@ -121,6 +121,7 @@ function playersAttackOptions (){
 /**
  * add event listener for attack buttons
  * add damage to each attack option
+ * decrease health bar
  */
 for(let i = 0; i < attackBtns.length; i++){
     attackBtns[i].addEventListener('click', function(){
@@ -138,9 +139,30 @@ for(let i = 0; i < attackBtns.length; i++){
         }else if(attackBtns[i].innerHTML === "spell"){
             damageDone = Math.floor(Math.random() * 20 + 15);
         }
-    })  
-      
+        console.log(damageDone)
+        function health(firstPlayer,secondPlayer){
+            firstPlayer = firstPlayerHealth;
+            secondPlayer = secondPlayerHealth;
+            if(!document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
+                let newHealth = secondPlayer - damageDone;
+                secondPlayerHealth = newHealth;
+                let healthBar = (newHealth / 100) * newHealth;
+                document.getElementById('player-two-health').style.width = healthBar + '%';
+                console.log(newHealth);
+            }else if(!document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
+                let newHealth = firstPlayer - damageDone;
+                firstPlayerHealth = newHealth;
+                let healthBar = (newHealth / 100) * newHealth;
+                document.getElementById('player-one-health').style.width = healthBar + '%';
+                console.log(newHealth);
+            }
+        }
+        health();
+    })
 }
+
+
+
 // hide attacker buttons after each attack
 for(let i = 0; i < attackBtns.length; i++){
 attackBtns[i].addEventListener('click', function(){
