@@ -8,6 +8,8 @@ const secondPlayerName = document.querySelector('.game_second-player--name');
 const startGame = document.querySelector('.game_mid-start');
 const attacks = ['slap', 'punch', 'sword', 'axe', 'mace', 'spell'];
 const attackBtns = document.querySelectorAll('.attack-btn');
+let scoreFirstPlayer = parseInt(document.querySelector('.score-fplayer').innerHTML);
+let scoreSecondPlayer = parseInt(document.querySelector('.score-splayer').innerHTML);
 
 // function to prevent default behaviour of the form
 function submitForm(event){
@@ -140,6 +142,7 @@ for(let i = 0; i < attackBtns.length; i++){
             damageDone = Math.floor(Math.random() * 20 + 15);
         }
         console.log(damageDone)
+        // decrease health bar
         function health(firstPlayer,secondPlayer){
             firstPlayer = firstPlayerHealth;
             secondPlayer = secondPlayerHealth;
@@ -156,8 +159,17 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.getElementById('player-one-health').style.width = healthBar + '%';
                 console.log(newHealth);
             }
+        // increase score
+            if(firstPlayerHealth <= 0){
+                scoreSecondPlayer = scoreSecondPlayer + 1;
+                document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
+            }else if(secondPlayerHealth <= 0){
+                scoreFirstPlayer = scoreFirstPlayer + 1;
+                document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
+            }
         }
         health();
+       
     })
 }
 
