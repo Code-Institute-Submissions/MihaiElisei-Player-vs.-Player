@@ -134,9 +134,11 @@ for(let i = 0; i < attackBtns.length; i++){
         if(attackBtns[i].innerHTML === "slap"){
             // image change for "slap" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
-                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/slap.gif'
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/slap.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
-                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/slap.gif'
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/slap.gif';
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
@@ -145,9 +147,11 @@ for(let i = 0; i < attackBtns.length; i++){
         }else if(attackBtns[i].innerHTML === "punch"){
             // image change for "punch" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
-                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/punch.gif'
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/punch.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
-                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/punch.gif'
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/punch.gif';
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
@@ -157,17 +161,21 @@ for(let i = 0; i < attackBtns.length; i++){
             // image change for "sword" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
                 document.querySelector('.game_second-player--image').src = 'assets/images/attacks/sword.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
                 document.querySelector('.game_first-player--image').src = 'assets/images/attacks/sword.gif';
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }
             // damage for "sword" attack
             damageDone = Math.floor(Math.random() * 10 + 5);
         }else if(attackBtns[i].innerHTML === "axe"){
             // image change for "axe" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
-                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/axe.gif'
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/axe.gif';
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
-                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/axe.gif'
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/axe.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
@@ -177,9 +185,11 @@ for(let i = 0; i < attackBtns.length; i++){
             // image change for "mace" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
                 document.querySelector('.game_first-player--image').src = 'assets/images/attacks/hammer.gif';
-                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)"
+                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)";
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
                 document.querySelector('.game_second-player--image').src = 'assets/images/attacks/hammer.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "mace" attack
             damageDone = Math.floor(Math.random() * 15 + 10);
@@ -187,9 +197,11 @@ for(let i = 0; i < attackBtns.length; i++){
             // image change for "spell" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
                 document.querySelector('.game_first-player--image').src = 'assets/images/attacks/spell.gif';
-                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)"
+                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)";
+                document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
-                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/spell.gif'
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/spell.gif';
+                document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "spell" attack
             damageDone = Math.floor(Math.random() * 20 + 15);
