@@ -105,6 +105,7 @@ function choseWhoStart(){
 function playersAttackOptions (){
     let randomNum1 = Math.floor(Math.random() * 6);
     let randomNum2 = Math.floor(Math.random() * 6);
+    // assign attack style to attack buttons
     if(document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
         document.querySelector('.game_second-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_second-player2--attack').innerHTML = attacks[randomNum2];
@@ -123,21 +124,74 @@ function playersAttackOptions (){
  * add event listener for attack buttons
  * add damage to each attack option
  * decrease health bar
+ * change players image after each attack
  */
+// select all attack buttons
 for(let i = 0; i < attackBtns.length; i++){
     attackBtns[i].addEventListener('click', function(){
         let damageDone;
+        // set damage to each button accordingly to the attack style assigned and change the image of players specific to each attack
         if(attackBtns[i].innerHTML === "slap"){
+            // image change for "slap" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/slap.gif'
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/slap.gif'
+            }
+            document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
+            document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
+            // damage for "slap" attack
             damageDone = Math.floor(Math.random() * 5);
         }else if(attackBtns[i].innerHTML === "punch"){
+            // image change for "punch" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/punch.gif'
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/punch.gif'
+            }
+            document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
+            document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
+            // damage for "punch" attack
             damageDone = Math.floor(Math.random() * 7 + 3);
         }else if(attackBtns[i].innerHTML === "sword"){
+            // image change for "sword" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/sword.gif';
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/sword.gif';
+            }
+            // damage for "sword" attack
             damageDone = Math.floor(Math.random() * 10 + 5);
         }else if(attackBtns[i].innerHTML === "axe"){
+            // image change for "axe" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/axe.gif'
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/axe.gif'
+            }
+            document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
+            document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
+            // damage for "sword" attack
             damageDone = Math.floor(Math.random() * 12 + 7);
         }else if(attackBtns[i].innerHTML === "mace"){
+            // image change for "mace" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/hammer.gif';
+                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)"
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/hammer.gif';
+            }
+            // damage for "mace" attack
             damageDone = Math.floor(Math.random() * 15 + 10);
         }else if(attackBtns[i].innerHTML === "spell"){
+            // image change for "spell" attack
+            if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
+                document.querySelector('.game_first-player--image').src = 'assets/images/attacks/spell.gif';
+                document.querySelector('.game_first-player--image').style.transform = "rotateY(180deg)"
+            }else if(attackBtns[i] === document.querySelector('.game_second-player1--attack') || attackBtns[i] === document.querySelector('.game_second-player2--attack')){
+                document.querySelector('.game_second-player--image').src = 'assets/images/attacks/spell.gif'
+            }
+            // damage for "spell" attack
             damageDone = Math.floor(Math.random() * 20 + 15);
         }
         document.querySelector('.rps_game').classList.add('hidden');
