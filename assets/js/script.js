@@ -184,14 +184,17 @@ for(let i = 0; i < attackBtns.length; i++){
             if(scoreFirstPlayer === 3){
                 document.querySelector('.game_first-player--image').src = 'assets/images/evil.gif';
                 document.querySelector('.game_second-player--image').src = 'assets/images/rip.gif';
+                document.querySelector('.game_section-winner').classList.remove('hidden')
             }else if(scoreSecondPlayer === 3){
                 document.querySelector('.game_second-player--image').src = 'assets/images/evil.gif';
                 document.querySelector('.game_first-player--image').src = 'assets/images/rip.gif'
+                document.querySelector('.game_section-winner').classList.remove('hidden')
             }
             scoreFirstPlayer = 0;
             scoreSecondPlayer = 0;
             document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
             document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
+            
             resetGame()
         }
     })
