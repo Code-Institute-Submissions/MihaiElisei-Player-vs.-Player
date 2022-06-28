@@ -229,26 +229,35 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-two-health').style.width = 0;
             }
-         
         }
         health();
         // reset score when a player reach score = 3
         if(scoreFirstPlayer === 3 || scoreSecondPlayer === 3){
+            const firstPlayer = document.getElementById('fplayer').value;
+            const secondPlayer = document.getElementById('splayer').value;
             // chage images when a player wins 
             if(scoreFirstPlayer === 3){
+                // change image for players if first player win
                 document.querySelector('.game_first-player--image').src = 'assets/images/evil.gif';
                 document.querySelector('.game_second-player--image').src = 'assets/images/rip.gif';
-                document.querySelector('.game_section-winner').classList.remove('hidden')
+                // remove hidden class for home section
+                document.querySelector('.game_section-winner').classList.remove('hidden');
+                // add winner name in home section
+                document.querySelector('.home_winner-name').innerHTML = firstPlayer;
             }else if(scoreSecondPlayer === 3){
+                // change image for players if second player win
                 document.querySelector('.game_second-player--image').src = 'assets/images/evil.gif';
                 document.querySelector('.game_first-player--image').src = 'assets/images/rip.gif'
-                document.querySelector('.game_section-winner').classList.remove('hidden')
+                // remove hidden class for home section
+                document.querySelector('.game_section-winner').classList.remove('hidden');
+                // add winner name in home section
+                document.querySelector('.home_winner-name').innerHTML = secondPlayer;
             }
             scoreFirstPlayer = 0;
             scoreSecondPlayer = 0;
             document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
             document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
-            
+            document.querySelector('.home').classList.remove('hidden');
             resetGame()
         }
     })
@@ -258,7 +267,7 @@ for(let i = 0; i < attackBtns.length; i++){
 function resetGame(){
     firstPlayerHealth = 100;
     secondPlayerHealth = 100;
-    document.querySelector('.game_mid-section').classList.add('hidden')
+    document.querySelector('.game_mid-section').classList.add('hidden');
 }
 
 // replay game function
@@ -277,7 +286,7 @@ function replay(){
 newGameBtn.addEventListener('click', function(){
     newGameBtn.classList.add('hidden');
     instructionsBtn.classList.add('hidden');
-    document.querySelector('.main_title').classList.add('hidden')
+    document.querySelector('.main_title').classList.add('hidden');
     document.querySelector('.main_form').classList.remove('hidden');
 });
 // hide attacker buttons after each attack
