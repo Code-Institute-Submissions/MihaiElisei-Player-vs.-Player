@@ -10,6 +10,7 @@ const attacks = ['slap', 'punch', 'sword', 'axe', 'mace', 'spell'];
 const attackBtns = document.querySelectorAll('.attack-btn');
 let scoreFirstPlayer = parseInt(document.querySelector('.score-fplayer').innerHTML);
 let scoreSecondPlayer = parseInt(document.querySelector('.score-splayer').innerHTML);
+const homeButton = document.querySelector('.home_button');
 
 // function to prevent default behaviour of the form
 function submitForm(event){
@@ -288,6 +289,7 @@ function replay(){
     secondPlayerHealth = 100;
     document.getElementById('player-one-health').style.width = "100%";
     document.getElementById('player-two-health').style.width = "100%";
+    document.querySelector('.game_mid-replay').classList.add('hidden');
     choseWhoStart();
 }
 
@@ -320,7 +322,29 @@ document.querySelector('.game_mid-replay').addEventListener('click', replay);
 // open instructions modal
 instructionsBtn.addEventListener('click', function(){
     document.querySelector('.main_instructions').classList.remove('hidden');
+});
+// home button
+homeButton.addEventListener('click', function(){
+    firstPlayerHealth = 100;
+    secondPlayerHealth = 100;
+    document.getElementById('player-one-health').style.width = "100%";
+    document.getElementById('player-two-health').style.width = "100%";
+    document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
+    document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
+    document.querySelector('.games_section').classList.add('hidden');
+    document.querySelector('.game_section-winner').classList.add('hidden');
+    document.querySelector('.game_mid-section').classList.remove('hidden');
+    document.querySelector('.main_title').classList.remove('hidden');
+    document.querySelector('.game_mid-replay').classList.add('hidden')
+    document.querySelector('.home').classList.add('hidden');
+    newGameBtn.classList.remove('hidden');
+    instructionsBtn.classList.remove('hidden');
+    startGame.classList.remove('hidden');
+    
+    
 })
+
+
 // close instructions modal
 document.querySelector('.main_instructions-close').addEventListener('click', function(){
     document.querySelector('.main_instructions').classList.add('hidden');
