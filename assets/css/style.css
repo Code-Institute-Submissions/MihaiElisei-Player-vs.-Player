@@ -266,6 +266,23 @@ label{
     bottom: 0;
     font-size: 2rem;
 }
+/* home section */
+.home{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.home_winner{
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem;
+    color: #fff;
+}
+.home_button{
+    margin:0 auto;
+    display: block;
+}
 /* footer section */
 .footer{
     position: absolute;
