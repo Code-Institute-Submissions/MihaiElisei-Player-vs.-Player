@@ -99,6 +99,8 @@ function choseWhoStart(){
         playersAttackOptions();
     }
     document.querySelector('.rps_game').classList.remove('hidden');
+    document.querySelector('.game_mid-text').classList.add('hidden');
+    document.querySelector('.game_mid-start').classList.add('hidden');
     
 } 
 
@@ -127,7 +129,8 @@ function playersAttackOptions (){
  * decrease health bar
  * change players image after each attack
  */
-// select all attack buttons
+
+// select all attack buttons and loop 
 for(let i = 0; i < attackBtns.length; i++){
     attackBtns[i].addEventListener('click', function(){
         let damageDone;
@@ -157,7 +160,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
             // damage for "punch" attack
-            damageDone = Math.floor(Math.random() * 7 + 3);
+            damageDone = Math.floor((Math.random() * 4) + 4);
         }else if(attackBtns[i].innerHTML === "sword"){
             // image change for "sword" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -168,7 +171,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }
             // damage for "sword" attack
-            damageDone = Math.floor(Math.random() * 10 + 5);
+            damageDone = Math.floor((Math.random() * 7) + 3);
         }else if(attackBtns[i].innerHTML === "axe"){
             // image change for "axe" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -181,7 +184,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
             // damage for "sword" attack
-            damageDone = Math.floor(Math.random() * 12 + 7);
+            damageDone = Math.floor((Math.random() * 9) + 5);
         }else if(attackBtns[i].innerHTML === "mace"){
             // image change for "mace" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -193,7 +196,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "mace" attack
-            damageDone = Math.floor(Math.random() * 15 + 10);
+            damageDone = Math.floor((Math.random() * 8) + 7);
         }else if(attackBtns[i].innerHTML === "spell"){
             // image change for "spell" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -205,7 +208,15 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "spell" attack
-            damageDone = Math.floor(Math.random() * 20 + 15);
+            damageDone = Math.floor((Math.random() * 10) + 9);
+        }
+        // change the displayed damage text color and inner html if damage > 10
+        if(damageDone >= 10){
+            document.querySelector('.damage-color').style.color = 'red';
+            document.querySelector('.game_mid-text--hit-damage').innerHTML = 'Critical Hit:';
+        }else{
+            document.querySelector('.damage-color').style.color = 'white';
+            document.querySelector('.game_mid-text--hit-damage').innerHTML = 'Normal Hit:';
         }
         document.querySelector('.rps_game').classList.add('hidden');
         document.querySelector('.game_mid-start').classList.add('hidden');
@@ -271,18 +282,10 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
             document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
             document.querySelector('.home').classList.remove('hidden');
-            resetGame()
+            document.querySelector('.game_mid-section').classList.add('hidden');
         }
     })
 }
-
-
-function resetGame(){
-    firstPlayerHealth = 100;
-    secondPlayerHealth = 100;
-    document.querySelector('.game_mid-section').classList.add('hidden');
-}
-
 // replay game function
 function replay(){
     firstPlayerHealth = 100;
@@ -316,7 +319,7 @@ for(let i = 0; i < attackBtns.length; i++){
             playersAttackOptions();
         }
     })
-    }
+}
 // replay game
 document.querySelector('.game_mid-replay').addEventListener('click', replay);
 // open instructions modal
@@ -340,11 +343,7 @@ homeButton.addEventListener('click', function(){
     newGameBtn.classList.remove('hidden');
     instructionsBtn.classList.remove('hidden');
     startGame.classList.remove('hidden');
-    
-    
 })
-
-
 // close instructions modal
 document.querySelector('.main_instructions-close').addEventListener('click', function(){
     document.querySelector('.main_instructions').classList.add('hidden');
@@ -357,3 +356,4 @@ document.addEventListener('keydown', function (e) {
 });
 // event listener for start game
 startGame.addEventListener('click', choseWhoStart);
+
