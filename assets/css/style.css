@@ -24,20 +24,48 @@ body{
     height: 20rem;
 }
 .header_title{
-    left: 50%;
-    top: 0;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+     -90deg,
+     #E9EFC0 0%,
+     #e2e82e 29%,
+     #fa870c 67%,
+     #7b6919 100%
+   );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 4rem;
     position: absolute;
-    transform: translate(-50%,0);
-    margin-top: 2rem;
-    font-size: 3.5rem;
-    color:#E9EFC0;
-}
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    }
+    
+    @keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+ }
 
 /* main page buttons */
 .main_title{
     text-align: center;
     margin-top: 3rem;
     color:#E9EFC0;
+    display: block;
+    box-sizing: border-box;
+}
+.main_title:hover{
+    transform: skew(-25deg) scale(1.05);
+   
 }
 .main_buttons {
     position: absolute;
