@@ -30,12 +30,14 @@ body{
     transform: translate(-50%,0);
     margin-top: 2rem;
     font-size: 3.5rem;
+    color:#E9EFC0;
 }
 
 /* main page buttons */
 .main_title{
     text-align: center;
     margin-top: 3rem;
+    color:#E9EFC0;
 }
 .main_buttons {
     position: absolute;
@@ -48,20 +50,23 @@ body{
     font-weight: bold;
     background-color: #fff;
     color: #000;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 5px;
     margin:0 3rem;
     width: 15rem;
+    cursor: pointer;
 }
 
 .btn:hover{
-    background-color:rgba(109, 139, 116, 0.111); 
+    background-color:rgba(109, 139, 116, 0.2); 
     color: #fff;
     box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.9);
     border: 1px solid white;
+    transform: translateY(-.5rem);
 }
 .btn:focus{
     outline:none;
+    transform: translateY(.5rem);
 }
 /* instructions modal */
 .main_instructions{
@@ -179,7 +184,7 @@ label{
 .game_second-player--name{
     text-align: center;
     font-size: 2.5rem;
-    color: #fff;
+    color:#E9EFC0;
 }
 .health-border{
     width: 50%;
@@ -217,7 +222,7 @@ label{
 .game_mid-text{
     font-size: 2rem;
     text-align: center;
-    color: #fff;
+    color:#E9EFC0;
     padding: 3rem;
 }
 .game_mid-start,
@@ -232,7 +237,7 @@ label{
     left: 50%;
     transform: translate(-50%,0);
     font-size: 1.5rem;
-    color: #fff;
+    color:#E9EFC0;
     text-align: center;
 }
 #game_mid-score-box > p {
@@ -277,7 +282,7 @@ label{
     text-align: center;
     font-size: 3rem;
     padding: 3rem;
-    color: #fff;
+    color:#E9EFC0;
 }
 
 .home_button{
@@ -307,7 +312,7 @@ label{
 
 .footer_social-networks a {
     text-decoration: none;
-    color: #fff;
+    color:#E9EFC0;
 }
 
 .footer_social-networks li:hover {
@@ -315,7 +320,7 @@ label{
 }
 .footer_text{
     font-size: 2rem;
-    color: #fff;
+    color:#E9EFC0;
     display: inline-block;
 }
 /* hidden class */

@@ -293,6 +293,8 @@ function replay(){
     document.getElementById('player-one-health').style.width = "100%";
     document.getElementById('player-two-health').style.width = "100%";
     document.querySelector('.game_mid-replay').classList.add('hidden');
+    document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
+    document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
     choseWhoStart();
 }
 
