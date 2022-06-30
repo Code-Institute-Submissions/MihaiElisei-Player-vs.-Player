@@ -199,6 +199,7 @@ label{
 .game_section--title{
     font-size: 3rem;
     text-align: center;
+    color: #E9EFC0;
 }
 .game{
     display: flex;

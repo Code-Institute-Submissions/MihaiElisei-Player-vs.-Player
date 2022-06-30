@@ -108,16 +108,20 @@ function choseWhoStart(){
 function playersAttackOptions (){
     let randomNum1 = Math.floor(Math.random() * 6);
     let randomNum2 = Math.floor(Math.random() * 6);
+    const firstPlayerName = document.getElementById('fplayer').value;
+    const secondPlayerName = document.getElementById('splayer').value;
     // assign attack style to attack buttons
     if(document.querySelector('.game_first-player--buttons').classList.contains('hidden')){
         document.querySelector('.game_second-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_second-player2--attack').innerHTML = attacks[randomNum2];
+        document.querySelector('.game_section--title').innerHTML = secondPlayerName + '`s' +' turn!';
         if(attacks[randomNum1] === attacks[randomNum2]){
             playersAttackOptions();
         }
     }else if(document.querySelector('.game_second-player--buttons').classList.contains('hidden')){
         document.querySelector('.game_first-player1--attack').innerHTML = attacks[randomNum1];
         document.querySelector('.game_first-player2--attack').innerHTML = attacks[randomNum2];
+        document.querySelector('.game_section--title').innerHTML = firstPlayerName +'`s'+ ' turn!';
         if(attacks[randomNum1] === attacks[randomNum2]){
             playersAttackOptions();
         }
@@ -245,6 +249,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--buttons').classList.add('hidden');
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-one-health').style.width = 0;
+                document.querySelector('.game_section--title').innerHTML = 'Next Round';
             }else if(secondPlayerHealth <= 0){
                 scoreFirstPlayer = scoreFirstPlayer + 1;
                 document.querySelector('.score-fplayer').innerHTML = scoreFirstPlayer;
@@ -252,6 +257,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--buttons').classList.add('hidden');
                 document.querySelector('.game_second-player--buttons').classList.add('hidden');
                 document.getElementById('player-two-health').style.width = 0;
+                document.querySelector('.game_section--title').innerHTML = 'Next Round';
             }
         }
         health();
@@ -283,6 +289,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.score-splayer').innerHTML = scoreSecondPlayer;
             document.querySelector('.home').classList.remove('hidden');
             document.querySelector('.game_mid-section').classList.add('hidden');
+            document.querySelector('.game_section--title').innerHTML = '';
         }
     })
 }
@@ -340,6 +347,10 @@ homeButton.addEventListener('click', function(){
     document.querySelector('.game_section-winner').classList.add('hidden');
     document.querySelector('.game_mid-section').classList.remove('hidden');
     document.querySelector('.main_title').classList.remove('hidden');
+    document.querySelector('.game_mid-text--hit-damage').innerHTML = 'Damage Done:';
+    document.querySelector('.game_mid-text--hit-damage').style.color = 'white';
+    document.getElementById('display-damage').innerHTML = '0';
+    document.getElementById('display-damage').style.color = 'white';
     document.querySelector('.game_mid-replay').classList.add('hidden')
     document.querySelector('.home').classList.add('hidden');
     newGameBtn.classList.remove('hidden');
