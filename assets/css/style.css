@@ -42,7 +42,7 @@ body{
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
     display: inline-block;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -286,7 +286,7 @@ label{
     top: 50%;
     transform: translate(-50%,-50%);
     width: 30%;
-    height: 30%;
+    height: 20%;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 2rem 2rem rgba(255, 255, 255, 0.3);
@@ -356,14 +356,15 @@ label{
     color:#E9EFC0;
     display: inline-block;
 }
-/* hidden class */
-.hidden {
-    display: none;
-}
 
 /* media queries */
-
+/* For larger to medium screens size from 1020px wide and down */
 @media screen and (max-width:1020px){
+    @media screen and (max-height:800px){
+        .header_title{
+            font-size: 2rem;
+        }
+    }
     .header_title{
         font-size: 2.4rem;
     }
@@ -377,7 +378,7 @@ label{
         font-size: 1.6rem;
     }
 }
-
+/* For medium screens size from 900px wide and down */
 @media screen and (max-width:900px){
     .btn{
         width: auto;
@@ -388,6 +389,7 @@ label{
     }
     .main_title{
         font-size: 1rem;
+        text-align: center;
     }
     .footer_social-networks li{
         padding: 2.8rem;
@@ -400,13 +402,19 @@ label{
         margin: 2rem auto;
     }
 }
-
+/* For medium screens size from 765px wide and down */
 @media screen and (max-width:765px){
     .btn{
         margin: 0 .8rem;
     }
+    .main_buttons-new,
+    .main_buttons-instructions{
+        margin: 0 auto;
+        display: block;
+        margin-top: 1rem;
+    }
     .header_title{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .main_title{
         font-size: .8rem;
@@ -421,4 +429,100 @@ label{
         font-family: sans-serif;
         padding: .4rem 2rem;
     }
+    .game_mid-start,
+    .game_mid-replay{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .game_first-player--image,
+    .game_second-player--image{
+        width: 100%;
+        padding: 2rem 0;
+    }
+    .rps_game{
+        height: 12%;
+    }
+    .rps_game > p{
+        font-size:1rem;
+    }
+}
+/* For small screens size from 500px wide and down */
+@media screen and (max-width:500px){
+    .main_title{
+        font-size: .7rem;
+    }
+    label{
+        font-size: 1rem;
+    }
+    .game_first-player--name,
+    .game_second-player--name,
+    .game_mid-text{
+        font-size: 1.4rem;
+    }
+    #game_mid-score-box{
+        font-size: 1.2rem;
+    }
+    .rps_game > p{
+        font-size: .8rem;
+    }
+    .rps_game{
+        height: 10%;
+    }
+    .game_second-player--buttons,
+    .game_first-player--buttons{
+        display: block;
+    }
+    .attack-btn{
+        font-size: 1.6rem;
+        margin: 1rem auto;
+    }
+    .health-border{
+        width: 100%;
+    }
+    .home_winner{
+        font-size: 1.2rem;
+    }
+    .home_button{
+        display: block;
+        margin: 0 auto;
+    }
+    .game_section--title{
+        font-size: 1.4rem;
+    }
+}
+/* For small screens size from 480px wide and down */
+@media screen and (max-width:480px){
+    .header_title{
+        font-size: .8rem;
+    }
+    .footer_social-networks li{
+        padding: 1.8rem;
+    }
+    .footer_text{
+        font-size: 1.6rem;
+    }
+    .rps_game > p{
+        font-size:.6rem;
+    }
+    .attack-btn{
+        font-size: 1.2rem;
+        margin: .5rem auto;
+    }
+    .game_mid-text{
+        font-size: 1.2rem;
+    }
+    .main_form{
+        width: 80%;
+        top: 50%;
+    }
+    .main_instructions-title{
+        font-size: 1.4rem;
+    }
+    .main_instructions-list{
+        font-size: 1.2rem;
+    }
+}
+/* hidden class */
+.hidden {
+    display: none;
 }
