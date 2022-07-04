@@ -59,3 +59,6 @@ This website was created for academic purposes, all photos were searched and dow
 
 ## Form Page:
 ![Form page whireframe image](assets/images/README/form-page.png)
+
+## Main Game
+![Main game whireframe image](assets/images/README/main-game.png)
