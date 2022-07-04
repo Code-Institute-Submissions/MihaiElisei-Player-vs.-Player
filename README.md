@@ -50,3 +50,12 @@ This website was created for academic purposes, all photos were searched and dow
 
 # 1.5 Site Skeleton
 [Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for web browser and a mobile browser format:
+
+## Main Page:
+![Main page whireframe image](assets/images/README/main-page.png)
+
+## Instructions 
+![Instructions whireframe image](assets/images/README/instructions.png)
+
+## Form Page:
+![Form page whireframe image](assets/images/README/form-page.png)
