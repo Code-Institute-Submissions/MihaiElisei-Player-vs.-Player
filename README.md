@@ -33,3 +33,13 @@ The content of the game changes at every action of a user. Folloiwng user's expe
 * Responsive design for all screen/device sizes like mobile, tablet and desktop;
 
 # 1.3 Color Scheme
+
+The choice of website right foreground and background colour is essential that decides the site visitors wheather to emote the site or not. I used [Color Hunt](https://colorhunt.co/) to select the background and foreground color. Colors that i used are:
+
+* #6D8B74 - main background color;
+* #E9EFC0, #e2e82e, #fa870c, #7b6919 linear gradient for Page Title animation;
+* #E9EFC0 - text color;
+* #fff - buttons background color;
+* rgba(255, 255, 255, 0.5) - shadows;
+* #000 - borders and instructions text color;
+* green and red - form validation border.
