@@ -43,3 +43,10 @@ The choice of website right foreground and background colour is essential that d
 * rgba(255, 255, 255, 0.5) - shadows;
 * #000 - borders and instructions text color;
 * green and red - form validation border.
+
+# 1.4 Images and Logo
+
+This website was created for academic purposes, all photos were searched and downloaded from [Giphy website](https://giphy.com/)
+
+# 1.5 Site Skeleton
+[Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for web browser and a mobile browser format:
