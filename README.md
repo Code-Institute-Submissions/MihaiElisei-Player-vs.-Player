@@ -100,3 +100,18 @@ The screenshots of Main Game are below:
 * On the screen will be fireworks;
 * Name of the winner will be displayed and the home button;
 ![Winner image](assets/images/README/winner.png)
+
+# 3. Technologies Used
+
+* HTML5 was used for structuring and presenting content of the website;
+* CSS3 was used to provide the style to the content written in a HTML;
+* JavaScript was used to give logic to the game;
+* Balsamiq was used to create wireframes of the website;
+* Google Fonts was used to import font-family 'Press Start 2P' into style.css file and which was used throughout the pages of the website;
+* Chrome was used to debug and test the source code using HTML5 as well as to test site responsiveness;
+* Github was used to create the repository and to store the cproject's code after pushed from Git;
+* Git was used as the Code Editor for the site;
+* Color Hunt was used to select the background and font color in the website;
+* W3C Markup and Jigsaw validation tools were used to validate the HTML code and CSS style used in the proejct;
+* JShint was used to validate JavaScript code;
+* Ami was used to develop a Mockup screenshot generator.
