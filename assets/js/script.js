@@ -19,7 +19,7 @@ function submitForm(event){
         document.querySelector('.main_form').classList.add('hidden');
         document.querySelector('.games_section').classList.remove('hidden');
         document.querySelector('.footer').classList.add('hidden');
-    })
+    });
     playersNames();
 }
 
@@ -55,33 +55,33 @@ function choseWhoStart(){
     let secondPlayer;
     // decide who wins
     if(firstPlayerCoice === "rock" && secondPlayerChoice === "scissors"){
-        playerOneImage.style.backgroundImage = "url(assets/images/rock.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/scissors.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/rock.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/scissors.png)";
         firstPlayer = "win";
         secondPlayer = "lose";
     }else if(firstPlayerCoice === "scissors" && secondPlayerChoice === "paper"){
-        playerOneImage.style.backgroundImage = "url(assets/images/scissors.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/paper.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/scissors.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/paper.png)";
         firstPlayer = "win";
         secondPlayer = "lose";
     }else if(firstPlayerCoice === "paper" && secondPlayerChoice === "rock"){
-        playerOneImage.style.backgroundImage = "url(assets/images/paper.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/rock.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/paper.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/rock.png)";
         firstPlayer = "win";
         secondPlayer = "lose";
     }else if(firstPlayerCoice === "scissors" && secondPlayerChoice === "rock"){
-        playerOneImage.style.backgroundImage = "url(assets/images/scissors.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/rock.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/scissors.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/rock.png)";
         firstPlayer = "lose";
         secondPlayer = "win";
     }else if(firstPlayerCoice === "paper" && secondPlayerChoice === "scissors"){
-        playerOneImage.style.backgroundImage = "url(assets/images/paper.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/scissors.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/paper.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/scissors.png)";
         firstPlayer = "lose";
         secondPlayer = "win";
     }else if(firstPlayerCoice === "rock" && secondPlayerChoice === "paper"){
-        playerOneImage.style.backgroundImage = "url(assets/images/rock.png)"
-        playerTwoImage.style.backgroundImage = "url(assets/images/paper.png)"
+        playerOneImage.style.backgroundImage = "url(assets/images/rock.png)";
+        playerTwoImage.style.backgroundImage = "url(assets/images/paper.png)";
         firstPlayer = "lose";
         secondPlayer = "win";
     // reply the game if it`s a tie
@@ -277,7 +277,7 @@ for(let i = 0; i < attackBtns.length; i++){
             }else if(scoreSecondPlayer === 3){
                 // change image for players if second player win
                 document.querySelector('.game_second-player--image').src = 'assets/images/evil.gif';
-                document.querySelector('.game_first-player--image').src = 'assets/images/rip.gif'
+                document.querySelector('.game_first-player--image').src = 'assets/images/rip.gif';
                 // remove hidden class for home section
                 document.querySelector('.game_section-winner').classList.remove('hidden');
                 // add winner name in home section
@@ -291,7 +291,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_mid-section').classList.add('hidden');
             document.querySelector('.game_section--title').innerHTML = '';
         }
-    })
+    });
 }
 // replay game function
 function replay(){
@@ -327,7 +327,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_first-player--buttons').classList.remove('hidden');
             playersAttackOptions();
         }
-    })
+    });
 }
 // replay game
 document.querySelector('.game_mid-replay').addEventListener('click', replay);
@@ -351,16 +351,16 @@ homeButton.addEventListener('click', function(){
     document.querySelector('.game_mid-text--hit-damage').style.color = 'white';
     document.getElementById('display-damage').innerHTML = '0';
     document.getElementById('display-damage').style.color = 'white';
-    document.querySelector('.game_mid-replay').classList.add('hidden')
+    document.querySelector('.game_mid-replay').classList.add('hidden');
     document.querySelector('.home').classList.add('hidden');
     newGameBtn.classList.remove('hidden');
     instructionsBtn.classList.remove('hidden');
     startGame.classList.remove('hidden');
-})
+});
 // close instructions modal
 document.querySelector('.main_instructions-close').addEventListener('click', function(){
     document.querySelector('.main_instructions').classList.add('hidden');
-})
+});
 // event listener for closing instructions modal when press esc key
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !document.querySelector('.main_instructions').classList.contains('hidden')) {

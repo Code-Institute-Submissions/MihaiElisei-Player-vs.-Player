@@ -115,3 +115,10 @@ The screenshots of Main Game are below:
 * W3C Markup and Jigsaw validation tools were used to validate the HTML code and CSS style used in the proejct;
 * JShint was used to validate JavaScript code;
 * Ami was used to develop a Mockup screenshot generator.
+
+# 4. Testing
+
+## 4.1 Testing tools:
+* Google Developer Tools for debug and test css and JavaScript code;
+* [I Am Responsive](https://ui.dev/amiresponsive) site to check if website is responsive on all devices screen sizes;
+* W3C Validator Tools was used to check for any errors within my HTML pages:
