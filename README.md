@@ -68,7 +68,7 @@ This website was created for academic purposes, all photos were searched and dow
 # Main Section
 * Logo is placed in the top left corner;
 * For the game title I have created a animation that translate text background colors, the font family I used is 'Press Start 2P', this will give the game a bit of retro look;
-* New Game and Instructions buttons are centred in the middle of the page;
+* New Game and Instructions buttons are centered in the middle of the page;
 * Social media links (Facebook, Instagram, Twitter and Youtube) are placed at the bottom of the page in the footer. All the links will be opened in a new tab.
 
 The screenshots of Main Section are below:
@@ -76,4 +76,27 @@ The screenshots of Main Section are below:
 ![Game Instructions](assets/images/README/game-instructions.png)
 
 # Form Section
-* 
+* The form is centered on the middle of the page;
+* If the imput is focused and empty red bottom border will appear;
+* When the input is filled red border will change to green;
+* Hover effect to the submit button.
+![Form Section](assets/images/README/form-section.png)
+
+# Game section
+* Game section is divided in three sections : First player section, Second player section and middle section;
+* On each player section is the name of the player, an image section , health bar and attack buttons;
+* On the mid section are the start game and replay game buttons, score box and damage done displayed after each attack;
+* Rock paper scissors game will be displayed once a start button is pressed or replay button is pressed. The game window is centered on the middle of the page and is divided in two sections where you will see each player option assigned automaticly.
+
+The screenshots of Main Game are below:
+![Main Game](assets/images/README/main-game1.png)
+![Main Game](assets/images/README/main-game2.png)
+![Main Game](assets/images/README/main-game3.png)
+
+# Winner section
+
+* When a player reach 3 points score will win the game;
+* The images for both players will update;
+* On the screen will be fireworks;
+* Name of the winner will be displayed and the home button;
+![Winner image](assets/images/README/winner.png)
