@@ -62,3 +62,18 @@ This website was created for academic purposes, all photos were searched and dow
 
 ## Main Game
 ![Main game whireframe image](assets/images/README/main-game.png)
+
+# 2.Features
+
+# Main Section
+* Logo is placed in the top left corner;
+* For the game title I have created a animation that translate text background colors, the font family I used is 'Press Start 2P', this will give the game a bit of retro look;
+* New Game and Instructions buttons are centred in the middle of the page;
+* Social media links (Facebook, Instagram, Twitter and Youtube) are placed at the bottom of the page in the footer. All the links will be opened in a new tab.
+
+The screenshots of Main Section are below:
+![Main section](assets/images/README/main-section.png)
+![Game Instructions](assets/images/README/game-instructions.png)
+
+# Form Section
+* 
