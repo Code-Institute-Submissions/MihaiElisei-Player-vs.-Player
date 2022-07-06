@@ -112,6 +112,7 @@ The screenshots of Main Game are below:
 * CSS3 was used to provide the style to the content written in a HTML;
 * JavaScript was used to give logic to the game;
 * Balsamiq was used to create wireframes of the website;
+* Font Awsome was used to improt icons to the sites;
 * Google Fonts was used to import font-family 'Press Start 2P' into style.css file and which was used throughout the pages of the website;
 * Chrome was used to debug and test the source code using HTML5 as well as to test site responsiveness;
 * Github was used to create the repository and to store the cproject's code after pushed from Git;
@@ -200,3 +201,27 @@ I have tested my site on multiple devices. These include:
 
 * For Mobile: 
 ![Lighthouse report](assets/images/README/ligthhouse-mobile.png)
+
+# 5. Bugs
+
+## Solved Bugs
+
+* When i checked js file on jshint i found some lines that were not terminated with ";"
+* Images for the players ware not changing after each player attack, I created an array with the images and I assigned attack images to array index and that fixed the issue;
+* No meta tags and SEO for Ligthhouse report was low, added meta tags and problem fixed;
+
+# 6. Deployment
+ The site was deployed to GitHub pages using the following steps: 
+ * Sign up to GutHub;
+ * Create a new repository on GitHub;
+ * Click on settings on the navigation bar under the repository title;
+ * Select pages on the left menu bar;
+ * Click on the master branch and save;
+ * This will now generate a link with your website live;
+
+ # 7. Acknowledgement
+
+* Icons, footer and gallery section was inspired from Love Running project;
+* This website was created for academic purposes, all photos were searched and downloaded from the[Giphy website](https://giphy.com/);
+* For README.md file, reference of https://github.com/dhakal79/Portfolio-project-MS1 was considered; 
+* Thanks to my mentor Marcel Mulders for his support and feedback.
