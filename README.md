@@ -3,6 +3,7 @@
 Welcome to [Player vs. Player Game!](https://mihaielisei.github.io/Player-vs.-Player/)
 
 # Introduction
+
 Player vs. Player it is a small multiplayer game where two players attack eachother. Each player will have two attack options on each turn, each attack option deal a different amount of damage. First player that reach 3 points will win the game. 
 
 The game was build only with HTML, CSS and JavaScript, and the main purpose of the project is to dynamically chage the DOM using only one HTML file.
@@ -49,6 +50,7 @@ The choice of website right foreground and background colour is essential that d
 This website was created for academic purposes, all photos were searched and downloaded from [Giphy website](https://giphy.com/)
 
 # 1.5 Site Skeleton
+
 [Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for web browser and a mobile browser format:
 
 ## Main Page:
@@ -66,6 +68,7 @@ This website was created for academic purposes, all photos were searched and dow
 # 2.Features
 
 # Main Section
+
 * Logo is placed in the top left corner;
 * For the game title I have created a animation that translate text background colors, the font family I used is 'Press Start 2P', this will give the game a bit of retro look;
 * New Game and Instructions buttons are centered in the middle of the page;
@@ -76,6 +79,7 @@ The screenshots of Main Section are below:
 ![Game Instructions](assets/images/README/game-instructions.png)
 
 # Form Section
+
 * The form is centered on the middle of the page;
 * If the imput is focused and empty red bottom border will appear;
 * When the input is filled red border will change to green;
@@ -83,6 +87,7 @@ The screenshots of Main Section are below:
 ![Form Section](assets/images/README/form-section.png)
 
 # Game section
+
 * Game section is divided in three sections : First player section, Second player section and middle section;
 * On each player section is the name of the player, an image section , health bar and attack buttons;
 * On the mid section are the start game and replay game buttons, score box and damage done displayed after each attack;
@@ -119,6 +124,7 @@ The screenshots of Main Game are below:
 # 4. Testing
 
 ## 4.1 Testing tools:
+
 * Google Developer Tools for debug and test css and JavaScript code;
 * [I Am Responsive](https://ui.dev/amiresponsive) site to check if website is responsive on all devices screen sizes;
 * W3C Validator Tools was used to check for any errors within my HTML pages:
@@ -139,6 +145,7 @@ I have tested my site on multiple devices. These include:
 
 
 ## Main Section
+
 | TEST | OUTCOME | PASS / FAIL |
 |:---:|:---:|:---:|
 | New Game Button| When New Game is clicked form section will appear | PASS |
@@ -158,3 +165,9 @@ I have tested my site on multiple devices. These include:
 | Hover | When hover all icons change font size.|PASS|
 
 ## Form Section
+
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+| Inputs | When an input it`s focused and empty it will have a red border, when it's filled it will have a green border | PASS |
+|Responsive|Responsiveness of the page in different screen sizes (mobile and desktop) using differnt breakpoints were checked.|PASS|
+
