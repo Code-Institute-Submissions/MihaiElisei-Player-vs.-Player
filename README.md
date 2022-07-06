@@ -122,3 +122,39 @@ The screenshots of Main Game are below:
 * Google Developer Tools for debug and test css and JavaScript code;
 * [I Am Responsive](https://ui.dev/amiresponsive) site to check if website is responsive on all devices screen sizes;
 * W3C Validator Tools was used to check for any errors within my HTML pages:
+![Validate HTML](assets/images/README/validate-html.png)
+* W3C CSS Validation was used to check for any error within my CSS stylesheet:
+![Validate CSS](assets/images/README/validate-css.png)
+* JsHint Validation was used to check for any error within my JavaScript file:
+![Validate JavaScript](assets/images/README/validate-javascript.png)
+The submiForm function was called in HTML at line 26 in the form tag;
+
+## 4.2 Manual Testing
+
+I have tested my site on multiple devices. These include:
+* Galaxy Fold (280 x 653);
+* Iphone 6/7/8 Plus (414 x 736);
+* Ipad (768 x 1024);
+* Nest Hub (1024 x 600);
+
+
+## Main Section
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+| New Game Button| When New Game is clicked form section will appear | PASS |
+|Instructions Button | When clicked a modal window will appear with all instructions of the game, when click X or if of if pressed Esc modal window will close | PASS |
+| Responsive | All pages and elements are responsive (mobile and desktop) using differnt breakpoints. | PASS |
+| Text | Checked if all fonts and colors used are consistent or not | PASS |
+| Animations | All animations effects works on all pages | PASS |
+
+## Footer
+
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+|Facebook| On clicking Facebook icon, a new tab opens and redirects to the Facebook website.|PASS|
+|Twitter| On clicking Twitter icon, a new tab opens and redirects to the Twitter website.|PASS|
+|Youtube| On clicking youtube icon, a new tab opens and redirects to the youtube website.|PASS|
+|Instagram|	On clicking instagram icon, a new tab opens and redirects to the instagram website.|PASS|
+| Hover | When hover all icons change font size.|PASS|
+
+## Form Section
