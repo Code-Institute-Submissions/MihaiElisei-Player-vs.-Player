@@ -192,3 +192,8 @@ I have tested my site on multiple devices. These include:
 | Images | Change images for winner and for loser | PASS |
 | Winner Name | Name of the winner will be displayed | PASS |
 | Home Button | When clicked game will reset and will be redirected to Main section | PASS |
+
+## 4.3 Lighthouse Reports:
+
+* For Desktop:
+![Lighthouse report](assets/images/README/lighthouse-desktop.png)
