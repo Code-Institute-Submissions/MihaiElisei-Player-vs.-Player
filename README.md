@@ -197,3 +197,6 @@ I have tested my site on multiple devices. These include:
 
 * For Desktop:
 ![Lighthouse report](assets/images/README/lighthouse-desktop.png)
+
+* For Mobile: 
+![Lighthouse report](assets/images/README/ligthhouse-mobile.png)
