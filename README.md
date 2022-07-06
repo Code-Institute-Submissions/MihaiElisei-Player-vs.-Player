@@ -171,3 +171,24 @@ I have tested my site on multiple devices. These include:
 | Inputs | When an input it`s focused and empty it will have a red border, when it's filled it will have a green border | PASS |
 |Responsive|Responsiveness of the page in different screen sizes (mobile and desktop) using differnt breakpoints were checked.|PASS|
 
+## Game Section
+
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+| Players Names | Names in the game will be changed with the players inputs from the form; | PASS |
+| Start Button | When clicked Rock Paper Scissors Game will start and the winner will start first. Who start first will have Attack Options in his section. | PASS |
+| Replay Button | When clicked Rock Paper Scissors Game will start and the winner will start first. Who start first will have Attack Options in his section.| PASS |
+| Rock, Paper, Scissors | Window is centered as wanted, images are loaded | PASS |
+| Attack Options | When a player attack, the attack buttons will be hidden and will appear to the next player; | PASS |
+| Health Bar | Health bar decrease by the amount of damage done by a player; | PASS |
+| Images | Images will change at every attack, depending of the attack style; | PASS |
+| Score Box | Score will increase when a player reach 0 health | PASS |
+
+## End Game
+
+| TEST | OUTCOME | PASS / FAIL |
+|:---:|:---:|:---:|
+| Fireworks | When a player reach 3 points mid section will be hidden and a fireworks gif will appear | PASS |
+| Images | Change images for winner and for loser | PASS |
+| Winner Name | Name of the winner will be displayed | PASS |
+| Home Button | When clicked game will reset and will be redirected to Main section | PASS |
