@@ -1,4 +1,35 @@
 # Player vs. Player
+# Table of Contents
+* [Introduction](#introduction)
+* [User Expereince (UX) design](#1-user-expereince-ux-design)
+    * [User Goals](#11-user-goals)
+    * [User Expectations](#12-user-expectations)
+    * [Color Scheme](#13-color-scheme)
+    * [Images and Log](#14-images-and-logo)
+    * [Site Skeleton](#15-site-skeleton)
+        * [Main Page](#main-page)
+        * [Instructions](#instructions)
+        * [Main Page](#form-page)
+        * [Main Game](#main-game)
+* [Features](#2-features)
+    * [Main Section](#main-section)
+    * [Form Section](#form-section)
+    * [Game section](#game-section)
+    * [Winner section](#winner-section)
+* [Technologies Used](#3-technologies-used)
+* [Testing](#4-testing)
+    * [Testing tools](#41-testing-tools)
+    * [Manual Testing](#42-manual-testing)
+        * [Main Section](#main-section-1)
+        * [Footer](#footer)
+        * [Form Section](#form-section-1)
+        * [Game Section](#game-section-1)
+        * [End Game](#end-game)
+    * [Lighthouse Reports](#43-lighthouse-reports)
+* [Bugs](#5-bugs)
+    * [Solved Bugs](#solved-bugs)
+* [Deployment](#6-deployment)
+* [Acknowledgement](#7-acknowledgement)
 
 Welcome to [Player vs. Player Game!](https://mihaielisei.github.io/Player-vs.-Player/)
 
@@ -12,8 +43,6 @@ Live version of the game [Player vs. Player.](https://mihaielisei.github.io/Play
 
 
 ![responsivnes image](assets/images/README/responsive.png)
-
-# Table of Contents
 
 # 1. User Expereince (UX) design
 
@@ -65,7 +94,7 @@ This website was created for academic purposes, all photos were searched and dow
 ## Main Game
 ![Main game whireframe image](assets/images/README/main-game.png)
 
-# 2.Features
+# 2. Features
 
 # Main Section
 
