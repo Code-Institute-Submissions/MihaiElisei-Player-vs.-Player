@@ -57,7 +57,7 @@ body{
 
 /* main page buttons */
 .main_title{
-    color:#E9EFC0;
+    color:#F7EC09;
     display: inline-block;
     box-sizing: border-box;
     position: absolute;
@@ -203,7 +203,7 @@ label{
 .game_section--title{
     font-size: 3rem;
     text-align: center;
-    color: #E9EFC0;
+    color: #F7EC09;
 }
 .game{
     display: flex;
@@ -217,7 +217,7 @@ label{
 .game_second-player--name{
     text-align: center;
     font-size: 2.5rem;
-    color:#E9EFC0;
+    color:#F7EC09;
 }
 .health-border{
     width: 50%;
@@ -255,7 +255,7 @@ label{
 .game_mid-text{
     font-size: 2rem;
     text-align: center;
-    color:#E9EFC0;
+    color:#F7EC09;
     padding: 3rem;
 }
 .game_mid-start,
@@ -270,7 +270,7 @@ label{
     left: 50%;
     transform: translate(-50%,0);
     font-size: 1.5rem;
-    color:#E9EFC0;
+    color:#F7EC09;
     text-align: center;
 }
 #game_mid-score-box > p {
@@ -295,7 +295,7 @@ label{
 .rps_game-fplayer,
 .rps_game-splayer{
     margin-top: 2rem;
-    width: 30%;
+    width: 25%;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -303,6 +303,7 @@ label{
     position: absolute;
     bottom: 0;
     font-size: 2rem;
+    
 }
 /* home section */
 .home{
@@ -313,9 +314,9 @@ label{
 }
 .home_winner{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 3rem;
-    color:#E9EFC0;
+    color:#F7EC09;
 }
 
 .home_button{
@@ -345,7 +346,7 @@ label{
 
 .footer_social-networks a {
     text-decoration: none;
-    color:#E9EFC0;
+    color:#F7EC09;
 }
 
 .footer_social-networks li:hover {
@@ -353,7 +354,7 @@ label{
 }
 .footer_text{
     font-size: 2rem;
-    color:#E9EFC0;
+    color:#F7EC09;
     display: inline-block;
 }
 

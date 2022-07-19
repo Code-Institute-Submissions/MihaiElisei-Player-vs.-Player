@@ -356,6 +356,7 @@ homeButton.addEventListener('click', function(){
     newGameBtn.classList.remove('hidden');
     instructionsBtn.classList.remove('hidden');
     startGame.classList.remove('hidden');
+    document.querySelector('.footer').classList.remove('hidden');
 });
 // close instructions modal
 document.querySelector('.main_instructions-close').addEventListener('click', function(){
