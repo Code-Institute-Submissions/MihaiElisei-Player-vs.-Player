@@ -134,6 +134,11 @@ function playersAttackOptions (){
  * change players image after each attack
  */
 
+// generate random number
+ function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+  
 // select all attack buttons and loop 
 for(let i = 0; i < attackBtns.length; i++){
     attackBtns[i].addEventListener('click', function(){
@@ -151,7 +156,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
             // damage for "slap" attack
-            damageDone = Math.floor(Math.random() * 5);
+            damageDone = randomNum(0,10);
         }else if(attackBtns[i].innerHTML === "punch"){
             // image change for "punch" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -164,7 +169,7 @@ for(let i = 0; i < attackBtns.length; i++){
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
             // damage for "punch" attack
-            damageDone = Math.floor((Math.random() * 4) + 4);
+            damageDone = randomNum(5,10);
         }else if(attackBtns[i].innerHTML === "sword"){
             // image change for "sword" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -175,7 +180,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_second-player--image').src = 'assets/images/second-player.gif';
             }
             // damage for "sword" attack
-            damageDone = Math.floor((Math.random() * 7) + 3);
+            damageDone = randomNum(5,12);
         }else if(attackBtns[i].innerHTML === "axe"){
             // image change for "axe" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -187,8 +192,8 @@ for(let i = 0; i < attackBtns.length; i++){
             }
             document.querySelector('.game_second-player--image').style.transform = "rotate(0)";
             document.querySelector('.game_first-player--image').style.transform = "rotate(0)";
-            // damage for "sword" attack
-            damageDone = Math.floor((Math.random() * 9) + 5);
+            // damage for "axe" attack
+            damageDone = randomNum(8,12);
         }else if(attackBtns[i].innerHTML === "mace"){
             // image change for "mace" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -200,7 +205,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "mace" attack
-            damageDone = Math.floor((Math.random() * 8) + 7);
+            damageDone = randomNum(10,15);
         }else if(attackBtns[i].innerHTML === "spell"){
             // image change for "spell" attack
             if(attackBtns[i] === document.querySelector('.game_first-player1--attack') || attackBtns[i] === document.querySelector('.game_first-player2--attack')){
@@ -212,7 +217,7 @@ for(let i = 0; i < attackBtns.length; i++){
                 document.querySelector('.game_first-player--image').src = 'assets/images/first-player.gif';
             }
             // damage for "spell" attack
-            damageDone = Math.floor((Math.random() * 10) + 9);
+            damageDone = randomNum(12,17);
         }
         // change the displayed damage text color and inner html if damage > 10
         if(damageDone >= 10){
