@@ -68,7 +68,7 @@ The choice of website right foreground and background colour is essential that d
 
 * #6D8B74 - main background color;
 * #E9EFC0, #e2e82e, #fa870c, #7b6919 linear gradient for Page Title animation;
-* #E9EFC0 - text color;
+* #F7EC09 - text color;
 * #fff - buttons background color;
 * rgba(255, 255, 255, 0.5) - shadows;
 * #000 - borders and instructions text color;
