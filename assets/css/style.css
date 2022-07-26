@@ -77,7 +77,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
-    display: inline-block;
+    display: none;
     text-align: center;
     font-size: 1.6rem;
 }
@@ -549,10 +549,77 @@ label{
         font-size: 1.2rem;
     }
 }
+/* hide all content for screens of 380px width and low */
 @media screen and (max-width:380px){
-    .main, .header, .footer{
+    .main, .header, .footer, .main_form, .games_section, .rps_game{
         display: none;
     }
+    .rotate{
+        display: inline-block;
+    }
+}
+/* For landscape  */
+@media screen and (max-height:667px){
+   .header_image{
+    height: 8rem;
+    padding: 1rem;
+   }
+   .btn{
+    font-size: 1.3rem;
+   }
+   .main_title{
+    top:30%;
+    font-size: 1rem;
+   }
+   .main_instructions{
+    height: 50%;
+    overflow: scroll;
+   }
+   .main_instructions-title{
+    font-size: 2rem;
+   }
+   .main_instructions-list{
+    font-size: 1.2rem;
+   }
+   .main_instructions-footer{
+    float: none;
+    text-align: center;
+   }
+   .footer_text{
+    font-size: 1.5rem;
+   }
+   .game_section--title{
+    font-size:1.5rem;
+   }
+   .game{
+    margin-top: 1rem;
+   }
+   .game_first-player--name, .game_second-player--name{
+    font-size: 1.5rem;
+   }
+   .game_first-player--image, .game_second-player--image{
+    height: 18rem;
+   }
+   .health-border{
+    width: 90%;
+   }
+   .game_mid-text{
+    font-size: 1rem;
+    padding: 1rem;
+   }
+   .rps_game-fplayer, .rps_game-splayer{
+    margin:1rem 0;
+   }
+   #game_mid-score-box{
+    font-size: 1rem;
+   }
+   .home_button{
+    margin: 0 auto;
+   }
+   .home_winner{
+    font-size: 1.5rem;
+    padding: .5rem;
+   }
 }
 
 /* hidden class */
